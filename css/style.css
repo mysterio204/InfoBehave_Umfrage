@@ -1,0 +1,86 @@
+body{
+background-color: #3B383B;
+    color:white;
+    font-family: sans-serif;
+
+}
+bla{
+    top:0px;
+    text-align: center;
+    background-color: black;
+    height: 100px;
+    
+}
+header{
+    font: normal 36px 'Advent';
+/*    font-family: 'Roboto', sans-serif;*/
+width:100%;
+    height:100px;
+    padding: 15px;
+/*    background-color: #337ab7;*/
+    background-color:#9C004B;
+    
+    text-align: center;
+    font-size: 50px;
+    color:aliceblue;
+    font-weight: 100;
+    vertical-align: middle;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+/*    border-radius: 6px;*/
+}
+header, h1{
+margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 300;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+#tweet_container{
+text-align: center;
+    margin-top: 50px;
+}
+#tweet_img{
+width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#slide_container{
+    margin-top: 50px;
+width: 30%;
+   margin-left: auto;
+    margin-right: auto;   
+}
+
+#start_container{
+    margin-top: 50px;
+width: 30%;
+   margin-left: auto;
+    margin-right: auto;   
+}
+#end_container{
+    font-size: 50px;
+    margin-top: 50px;
+width: 30%;
+   margin-left: auto;
+    margin-right: auto;   
+}
+.progress{
+    width: 30%;
+   margin-left: auto;
+    margin-right: auto; 
+}
+button{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+#nextbutton{
+float:right;
+}
+#valueDisplay{
+margin-top: 15px;
+color: aliceblue;
+}
+
