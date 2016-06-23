@@ -56,7 +56,7 @@
 
     var start_survey = function () {
         $('#slide_container').show();
-         $('#prog_bar').show();
+        $('#prog_bar').show();
         $('#start_container').hide();
         nextTweet();
 
@@ -64,8 +64,11 @@
 
     var nextTweet = function () {
         console.log("Tweet number : " + counter);
+        
+        var imagename= $('#tweet_img').attr('src').substring(9);
+        imagename = imagename.slice(0,-4);
         var prev = {
-            image: $('#tweet_img').attr('src'),
+            image: imagename,
             score: $('#valueDisplay').text()
         };
         result_arr.push(prev);
@@ -73,19 +76,27 @@
 
 
         if (counter <= 12) {
-            $('#tweet_img').attr("src", "/tweets/" + FileNames[counter - 1]);
-            
-            var percent = ((counter)/12)*100;
-            console.log("percent done: "+percent );
-             $('.progress-bar').css('width', percent+'%').attr('aria-valuenow', percent).text(counter+"/12"); 
-               counter++;
-        } else {
+            $('#tweet_img').attr("src", "./tweets/" + FileNames[counter - 1]);
 
+            var percent = ((counter) / 12) * 100;
+            console.log("percent done: " + percent);
+            $('.progress-bar').css('width', percent + '%').attr('aria-valuenow', percent).text(counter + "/12");
+            counter++;
+        } else {
+            result_arr.shift()
             console.log(result_arr);
             $('#slide_container').hide();
             $('#end_container').show();
             $('#tweet_img').hide();
             $('#prog_bar').hide();
+
+            //            $.get("sendToServer.php");
+            var result = JSON.stringify(result_arr);
+          
+            $.post('sendToServer.php', {
+                result: result
+            })
+
         }
 
 
@@ -96,8 +107,8 @@
 
     $(document).ready(function () {
         $('#slide_container').hide();
-         $('#end_container').hide();
-         $('#prog_bar').hide();
+        $('#end_container').hide();
+        $('#prog_bar').hide();
         var tweetNums = createTweetArray();
 
         FileNames = createFileArray(tweetNums);
