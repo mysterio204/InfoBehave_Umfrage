@@ -16,7 +16,7 @@ fclose($fp);
 //$list=$_POST['result_arr'];
 $result = $_POST['result'];
 //$elements = explode(',', $elements);
-$array=json_decode($_POST['result']); 
+$array=json_decode($_POST['result'],true); 
 
 
 
@@ -33,6 +33,25 @@ fwrite($file,','. PHP_EOL .$result. PHP_EOL .']');
 
 
 fclose($file); 
+
+
+$csvfile = fopen("scores.csv","a");
+
+foreach ($array as $line)
+  {
+    fwrite($csvfile,$line['image'].','.$line['score']."\n");
+           
+
+
+//  fputcsv($csvfile,explode(',',$line));
+  }
+
+//fputcsv($file,$result);
+
+//fputcsv($csvfile,implode($array));
+
+
+fclose($csvfile); 
 
 // Read the file
 
