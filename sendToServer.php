@@ -15,6 +15,9 @@ fclose($fp);
 
 //$list=$_POST['result_arr'];
 $result = $_POST['result'];
+$age = $_POST['age'];
+$gender = $_POST['gender'];
+
 //$elements = explode(',', $elements);
 $array=json_decode($_POST['result'],true); 
 
@@ -36,16 +39,17 @@ fclose($file);
 
 
 $csvfile = fopen("scores.csv","a");
+ fwrite($csvfile,$age.','.$gender);
 
 foreach ($array as $line)
   {
-    fwrite($csvfile,$line['image'].','.$line['score']."\n");
-           
+    fwrite($csvfile,','.$line['image'].','.$line['score']);
+       
 
 
 //  fputcsv($csvfile,explode(',',$line));
   }
-
+  fwrite($csvfile,"\n"); 
 //fputcsv($file,$result);
 
 //fputcsv($csvfile,implode($array));
