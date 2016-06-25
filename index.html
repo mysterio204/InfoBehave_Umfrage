@@ -11,7 +11,9 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/range2.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+     
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -81,20 +83,21 @@ Diese Umfrage wird komplett anonym durchgeführt. <br></p>
         </button>
 
     </div>
-    <div id="end_container" class="middle_container">Vielen Dank für deine Teilnahme! <br>
-    
+    <div id="end_container" class="middle_container" style="text-align:center">Vielen Dank für deine Teilnahme! <br>
+
     
     </div>
     <div id="slide_container" class="middle_container">
         <p>Bewerten Sie die Glaubwürdigkeit des Tweets</p>
-        <form action="#">
-            <p class="range-field">
+<!--        <form action="#">-->
+<!--            <p class="range-field">-->
 
-                <input type="range" name="rangeInput" min="0" max="100" onchange="updateTextInput(this.value);">
+                <input id="slider" type="range" name="rangeInput" min="0" max="100" value="50" onchange="updateTextInput(this.value);">
 
-                <p id="valueDisplay">50</p>
-            </p>
-        </form>
+<!--            </p>-->
+<!--        </form>-->
+       <span><p id="valueDisplay">50</p><p style="float:left">%</p></span> 
+
 
         <button type="button" class="btn btn-default btn-lg" id="nextbutton" onclick="nextTweet()">
             Weiter <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>

@@ -94,9 +94,11 @@ var nextTweet = function () {
         image: imagename,
         score: $('#valueDisplay').text()
     };
+    
     result_arr.push(prev);
     console.log(result_arr);
-
+     document.getElementById('valueDisplay').innerHTML = "50";
+    document.getElementById('slider').value =50;
 
     if (counter <= 12) {
         $('#tweet_img').attr("src", "./tweets/" + FileNames[counter - 1]);

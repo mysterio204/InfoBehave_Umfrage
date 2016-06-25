@@ -2,6 +2,7 @@ body {
     background-color: #3B383B;
     color: white;
     font-family: sans-serif;
+    padding: 15px;
 }
 bla {
     top: 0px;
@@ -35,12 +36,15 @@ h1 {
 }
 #tweet_container {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 #tweet_img {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+}
+#slide_container{
+height: 70px;
 }
 
 /*
@@ -64,6 +68,11 @@ h1 {
 }
 */
 
+/*
+input[type='range'] {
+    width: 30%;
+}
+*/
 #end_container {
     font-size: 40px;
     /*
@@ -73,8 +82,8 @@ h1 {
     margin-right: auto;
 */
 }
-.blocksatz{
-text-align: justify;
+.blocksatz {
+    text-align: justify;
     font-weight: 100;
 }
 .progress {
@@ -88,6 +97,13 @@ text-align: justify;
     margin-left: auto;
     margin-right: auto;
 }
+
+#slider{
+    margin-top: 30px;
+
+
+}
+
 @media (max-width: 480px) {
     .middle_container {
         margin-top: 50px;
@@ -95,47 +111,45 @@ text-align: justify;
         margin-left: auto;
         margin-right: auto;
     }
-   
-    header{
-    font-size: 20px;
+    header {
+        font-size: 20px;
         height: 50px;
-        
     }
-    #logo{
-    display:none;
+    #logo {
+        display: none;
     }
 }
-@media (min-width:481px) and (max-width: 600px){
+@media (min-width:481px) and (max-width: 600px) {
     .middle_container {
         margin-top: 50px;
         width: 95%;
         margin-left: auto;
         margin-right: auto;
     }
-   
-    header{
-        height:70px;
-    font-size: 30px;
-        
+    header {
+        height: 70px;
+        font-size: 30px;
     }
-    #logo{
-    display:none;
+    #logo {
+        display: none;
+    }
+    input[type='range'] {
+        width: 100%;
     }
 }
-@media (min-width:601px) and (max-width: 992px){
+@media (min-width:601px) and (max-width: 992px) {
     .middle_container {
         margin-top: 50px;
         width: 70%;
         margin-left: auto;
         margin-right: auto;
     }
-   
-    header{
-    font-size: 40px;
-        
+    header {
+        font-size: 40px;
     }
-    #logo{
-  
+    #logo {}
+    input[type='range'] {
+        width: 100%;
     }
 }
 button {
@@ -145,6 +159,7 @@ button {
     float: right;
 }
 #valueDisplay {
-    margin-top: 15px;
+    width: 30px;
+    float: left;
     color: aliceblue;
 }
