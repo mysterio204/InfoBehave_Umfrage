@@ -17,6 +17,8 @@ fclose($fp);
 $result = $_POST['result'];
 $age = $_POST['age'];
 $gender = $_POST['gender'];
+$device = $_POST['device'];
+$num = $_POST['num'];
 
 //$elements = explode(',', $elements);
 $array=json_decode($_POST['result'],true); 
@@ -32,14 +34,14 @@ $file = fopen("scores.json","a");
 
 //fputcsv($file,$result);
 
-fwrite($file,','. PHP_EOL .$result. PHP_EOL .']');
+//fwrite($file,','. PHP_EOL .$result. PHP_EOL .']');
 
 
 fclose($file); 
 
 
 $csvfile = fopen("scores.csv","a");
- fwrite($csvfile,$age.','.$gender);
+ fwrite($csvfile,$num.','.$device.','.$age.','.$gender);
 
 foreach ($array as $line)
   {
